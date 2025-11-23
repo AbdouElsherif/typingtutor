@@ -82,63 +82,63 @@ const keyboardLayouts = {
 
     arabic: {
         rows: [
-            // Number row
+            // Number row (reversed for correct left-to-right display)
             [
-                { key: 'ذ', finger: 'left-pinky' },
-                { key: '1', finger: 'left-pinky' },
-                { key: '2', finger: 'left-ring' },
-                { key: '3', finger: 'left-middle' },
-                { key: '4', finger: 'left-index' },
-                { key: '5', finger: 'left-index' },
-                { key: '6', finger: 'right-index' },
-                { key: '7', finger: 'right-index' },
-                { key: '8', finger: 'right-middle' },
-                { key: '9', finger: 'right-ring' },
-                { key: '0', finger: 'right-pinky' },
+                { key: '=', finger: 'right-pinky' },
                 { key: '-', finger: 'right-pinky' },
-                { key: '=', finger: 'right-pinky' }
+                { key: '0', finger: 'right-pinky' },
+                { key: '9', finger: 'right-ring' },
+                { key: '8', finger: 'right-middle' },
+                { key: '7', finger: 'right-index' },
+                { key: '6', finger: 'right-index' },
+                { key: '5', finger: 'left-index' },
+                { key: '4', finger: 'left-index' },
+                { key: '3', finger: 'left-middle' },
+                { key: '2', finger: 'left-ring' },
+                { key: '1', finger: 'left-pinky' },
+                { key: 'ذ', finger: 'left-pinky' }
             ],
-            // Top row
+            // Top row (reversed for correct left-to-right display)
             [
-                { key: 'ض', finger: 'left-pinky' },
-                { key: 'ص', finger: 'left-ring' },
-                { key: 'ث', finger: 'left-middle' },
-                { key: 'ق', finger: 'left-index' },
-                { key: 'ف', finger: 'left-index' },
-                { key: 'غ', finger: 'right-index' },
-                { key: 'ع', finger: 'right-index' },
-                { key: 'ه', finger: 'right-middle' },
-                { key: 'خ', finger: 'right-ring' },
-                { key: 'ح', finger: 'right-pinky' },
+                { key: 'د', finger: 'right-pinky' },
                 { key: 'ج', finger: 'right-pinky' },
-                { key: 'د', finger: 'right-pinky' }
+                { key: 'ح', finger: 'right-pinky' },
+                { key: 'خ', finger: 'right-ring' },
+                { key: 'ه', finger: 'right-middle' },
+                { key: 'ع', finger: 'right-index' },
+                { key: 'غ', finger: 'right-index' },
+                { key: 'ف', finger: 'left-index' },
+                { key: 'ق', finger: 'left-index' },
+                { key: 'ث', finger: 'left-middle' },
+                { key: 'ص', finger: 'left-ring' },
+                { key: 'ض', finger: 'left-pinky' }
             ],
-            // Home row
+            // Home row (reversed for correct left-to-right display)
             [
-                { key: 'ش', finger: 'left-pinky', isHome: true },
-                { key: 'س', finger: 'left-ring', isHome: true },
-                { key: 'ي', finger: 'left-middle', isHome: true },
-                { key: 'ب', finger: 'left-index', isHome: true, hasBump: true },
-                { key: 'ل', finger: 'left-index' },
-                { key: 'ا', finger: 'right-index' },
-                { key: 'ت', finger: 'right-index', isHome: true, hasBump: true },
-                { key: 'ن', finger: 'right-middle', isHome: true },
-                { key: 'م', finger: 'right-ring', isHome: true },
+                { key: 'ط', finger: 'right-pinky' },
                 { key: 'ك', finger: 'right-pinky', isHome: true },
-                { key: 'ط', finger: 'right-pinky' }
+                { key: 'م', finger: 'right-ring', isHome: true },
+                { key: 'ن', finger: 'right-middle', isHome: true },
+                { key: 'ت', finger: 'right-index', isHome: true, hasBump: true },
+                { key: 'ا', finger: 'right-index' },
+                { key: 'ل', finger: 'left-index' },
+                { key: 'ب', finger: 'left-index', isHome: true, hasBump: true },
+                { key: 'ي', finger: 'left-middle', isHome: true },
+                { key: 'س', finger: 'left-ring', isHome: true },
+                { key: 'ش', finger: 'left-pinky', isHome: true }
             ],
-            // Bottom row
+            // Bottom row (reversed for correct left-to-right display)
             [
-                { key: 'ئ', finger: 'left-pinky' },
-                { key: 'ء', finger: 'left-ring' },
-                { key: 'ؤ', finger: 'left-middle' },
-                { key: 'ر', finger: 'left-index' },
-                { key: 'لا', finger: 'left-index' },
-                { key: 'ى', finger: 'right-index' },
-                { key: 'ة', finger: 'right-index' },
-                { key: 'و', finger: 'right-middle' },
+                { key: 'ظ', finger: 'right-pinky' },
                 { key: 'ز', finger: 'right-ring' },
-                { key: 'ظ', finger: 'right-pinky' }
+                { key: 'و', finger: 'right-middle' },
+                { key: 'ة', finger: 'right-index' },
+                { key: 'ى', finger: 'right-index' },
+                { key: 'لا', finger: 'left-index' },
+                { key: 'ر', finger: 'left-index' },
+                { key: 'ؤ', finger: 'left-middle' },
+                { key: 'ء', finger: 'left-ring' },
+                { key: 'ئ', finger: 'left-pinky' }
             ],
             // Space row
             [
