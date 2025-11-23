@@ -1,0 +1,21 @@
+{
+    "name": "typing-tutor",
+    "version": "1.0.0",
+    "description": "Touch Typing Tutor - Learn touch typing in Arabic and English",
+    "main": "index.html",
+    "scripts": {
+        "dev": "python -m http.server 8000",
+        "start": "python -m http.server 8000"
+    },
+    "keywords": [
+        "typing",
+        "tutor",
+        "touch-typing",
+        "arabic",
+        "english",
+        "education"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {}
+}

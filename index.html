@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch Typing Tutor - تعليم الكتابة باللمس</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎯 Touch Typing Tutor</h1>
+            <p>تعلم الكتابة باللمس باللغتين العربية والإنجليزية</p>
+        </div>
+
+        <!-- Main Menu -->
+        <div id="mainMenu" class="main-menu">
+            <!-- Language Selection -->
+            <div class="language-selection">
+                <button class="lang-btn active" data-lang="arabic" onclick="selectLanguage('arabic')">
+                    العربية 🇸🇦
+                </button>
+                <button class="lang-btn" data-lang="english" onclick="selectLanguage('english')">
+                    English 🇺🇸
+                </button>
+            </div>
+
+            <!-- Overall Progress -->
+            <div class="progress-container">
+                <h3 style="margin-bottom: 10px;">التقدم الكلي</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="overallProgress" style="width: 0%"></div>
+                </div>
+                <p style="text-align: center; margin-top: 10px; color: #718096;">
+                    <span id="progressText">0 من 0 دروس مكتملة</span>
+                </p>
+            </div>
+
+            <!-- Lessons Grid -->
+            <div class="lesson-grid" id="lessonsGrid">
+                <!-- Lessons will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <!-- Typing Section -->
+        <div id="typingSection" class="typing-section">
+            <!-- Lesson Header -->
+            <div class="lesson-header">
+                <div class="lesson-info">
+                    <h2 id="currentLessonTitle">Lesson Title</h2>
+                    <p id="currentLessonDesc">Lesson Description</p>
+                </div>
+                <button class="back-btn" onclick="backToMenu()">
+                    ← العودة
+                </button>
+            </div>
+
+            <!-- Stats Dashboard -->
+            <div class="stats-dashboard">
+                <div class="stat-card">
+                    <h3>السرعة</h3>
+                    <div class="value" id="wpmDisplay">0</div>
+                    <small>WPM</small>
+                </div>
+                <div class="stat-card">
+                    <h3>الدقة</h3>
+                    <div class="value" id="accuracyDisplay">0</div>
+                    <small>%</small>
+                </div>
+                <div class="stat-card">
+                    <h3>الأخطاء</h3>
+                    <div class="value" id="errorsDisplay">0</div>
+                    <small>Errors</small>
+                </div>
+                <div class="stat-card">
+                    <h3>التقدم</h3>
+                    <div class="value" id="lessonProgress">0</div>
+                    <small>%</small>
+                </div>
+            </div>
+
+            <!-- Text Display -->
+            <div class="text-display">
+                <div class="text-to-type" id="textDisplay">
+                    <!-- Text will be displayed here -->
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <input type="text" class="typing-input" id="typingInput" placeholder="ابدأ الكتابة هنا..."
+                    autocomplete="off" spellcheck="false">
+            </div>
+
+            <!-- Virtual Keyboard -->
+            <div class="keyboard-container" id="keyboardContainer">
+                <!-- Keyboard will be rendered here -->
+            </div>
+
+            <!-- Exercise Navigation -->
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn btn-secondary" onclick="previousExercise()" id="prevBtn" style="margin-right: 10px;">
+                    ← السابق
+                </button>
+                <span id="exerciseNumber" style="margin: 0 20px; font-weight: 600;">
+                    تمرين 1 من 5
+                </span>
+                <button class="btn btn-secondary" onclick="nextExercise()" id="nextBtn" style="margin-left: 10px;">
+                    التالي →
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Modal -->
+        <div id="resultsModal" class="results-modal">
+            <div class="results-content">
+                <h2 id="resultsTitle">🎉 أحسنت!</h2>
+                <p id="resultsMessage"></p>
+
+                <div class="results-stats">
+                    <div class="result-stat">
+                        <h3>السرعة النهائية</h3>
+                        <div class="value" id="finalWPM">0</div>
+                        <small>WPM</small>
+                    </div>
+                    <div class="result-stat">
+                        <h3>الدقة</h3>
+                        <div class="value" id="finalAccuracy">0</div>
+                        <small>%</small>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn btn-primary" onclick="nextLesson()">
+                        الدرس التالي →
+                    </button>
+                    <button class="btn btn-secondary" onclick="retryLesson()">
+                        🔄 إعادة المحاولة
+                    </button>
+                    <button class="btn btn-secondary" onclick="closeResults()">
+                        العودة للقائمة
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="firebase-config.js"></script>
+    <script src="keyboard-layouts.js"></script>
+    <script src="lessons-data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
